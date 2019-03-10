@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let brand of brands | async">
+            <div (click)="onClick(brand.fields.page_title)" class="col-6 col-md-3 col-lg-2 text-center">
+              {{ brand.fields.page_title}}
+            </div>
+          </ng-container>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="jumbotron">
+        <h1 class="text-center">Merek</h1>
+        <p class="text-center">Pilih mereknya sebelum tentukan mobil impian Anda</p>
+</div>
+
+<app-brand-list [brands]="brands$" (link)="goToBrand($event)"></app-brand-list>

@@ -1,0 +1,162 @@
+// // @import '../../../custom-styles/bootstrap/base';
+// /*#region Layout positioning, section index levels */
+// main {
+//     // margin-right: -20px;
+//     @include media-breakpoint-down(md) {
+//       display: flex;
+//       flex-direction: column;
+
+//       & > .c-brand-description-section {
+//         order: 1;
+//       }
+
+//       & > .c-model-list-section {
+//         order: 2;
+//       }
+
+//       & > .c-promos-card-section {
+//         display: none;
+//       }
+
+//       & > .c-reviews-section {
+//         order: 3;
+//         display: none;
+//       }
+
+//       & > .c-mobile-reviews-section {
+//         order: 3;
+//         display: block;
+//       }
+
+//       & > .c-news-section {
+//         order: 4;
+//       }
+
+//       & > .c-dealers-listings-section {
+//         order: 5;
+//       }
+
+//       & > .c-dealer-list-section {
+//         order: 6;
+//       }
+
+//       & > .c-used-car-filter-list {
+//         order: 7;
+//       }
+
+//       & > .c-brands-section {
+//         order: 8;
+//       }
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       $sidenav-width: 300px;
+
+//       & > .c-mobile-reviews-section {
+//         display: none;
+//       }
+
+//       & > .c-promos-card-section,
+//       & > .c-reviews-section,
+//       & > .c-news-section {
+//         float: right;
+//         width: $sidenav-width;
+//       }
+
+//       & > .c-dealer-list-section,
+//       & > .c-reviews-section,
+//       & > .c-news-section,
+//       & > .c-dealers-listings-section {
+//         clear: both;
+//       }
+
+//       & > .c-brand-description-section {
+//         width: calc(100% - 320px) !important; // 280px = $sidenav-width;
+//         margin-left: 0;
+//       }
+
+//       & > .c-model-list-section {
+//         padding-right: $sidenav-width !important;
+//       }
+//     }
+//   }
+
+//   /*#endregion */
+
+// /*#region Section cards styling */
+// @include media-breakpoint-down(md) {
+//     .c-brand-description-section,
+//     .c-promos-card-section,
+//     .c-reviews-section,
+//     .c-mobile-reviews-section,
+//     .c-news-section,
+//     .c-dealers-listings-section,
+//     .c-dealer-list-section,
+//     .c-used-car-filter-list,
+//     .c-brands-section,
+//     .c-promos-section,
+//     .c-mobile-app-banners-section {
+//       @include c-layer-card-mixin();
+//       padding: map_get($spacers, 3);
+//     }
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     .c-brand-description-section,
+//     .c-promos-card-section,
+//     .c-reviews-section,
+//     .c-mobile-reviews-section,
+//     .c-news-section,
+//     .c-dealers-listings-section,
+//     .c-dealer-list-section,
+//     .c-used-car-filter-list,
+//     .c-brands-section,
+//     .c-promos-section,
+//     .c-mobile-app-banners-section {
+//       @include c-layer-card-mixin();
+//       border-radius: $border-radius;
+//       padding: map_get($spacers, 4);
+//     }
+//   }
+//   /*#endregion */
+
+// /*#region Main sections specific styles */
+// .c-brand-description-section {
+//   padding-bottom: map_get($spacers, 2);
+//   margin-bottom: map_get($spacers, 2);
+//   @include media-breakpoint-up(md) {
+//     margin-bottom: map_get($spacers, 3);
+//   }
+// }
+
+// .c-news-section {
+//   background: $white;
+// }
+
+// .c-model-list-section {
+//   margin-bottom: 0;
+// }
+
+// .c-dealers-listings-section {
+//   clear: left;
+//   background: $white;
+// }
+
+// .c-promos-section {
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: map_get($spacers, 4);
+//   margin-right: map_get($spacers, 4);
+
+//   @include media-breakpoint-down(sm) {
+//     margin-left: -10px;
+//     margin-right: -10px;
+//     margin-bottom: map_get($spacers, 2);
+//   }
+// }
+
+// .c-dealer-list-section {
+//   background: $white;
+// }
+
+// /*#endregion */
