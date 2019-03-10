@@ -52,13 +52,21 @@ export class ContentfulService {
 
   getBrandByTitle(title: string) {
     title = this.capitalize(title);
-    const promise = this.client.getEntries({
-      content_type: this.contentTypeIds.brandsPage,
-      include: 0,
-      select: 'fields',
-      'fields.page_title': 'Toyota'
-    });
-    return from(promise).pipe(map(entry => entry.items));
+    // const promise = this.client.getEntries({
+    //   content_type: this.contentTypeIds.brandsPage,
+    //   include: 0,
+    //   select: 'fields',
+    //   // 'fields.page_title': 'Toyota'
+    // });
+    // return from(promise).pipe(map(entry => entry.items));
+
+    return this.http
+    .get<any>(this.contentfulUrl + '&content_type=brandPage'
+    + '&select=fields'
+    + '&fields.page_title=' + title
+    )
+    .pipe(map(entry => entry.items));
+
   }
   // the reason i'm using title and not sys.id is because we are passing the title in the url and not the sys.id
   capitalize(word: string) {

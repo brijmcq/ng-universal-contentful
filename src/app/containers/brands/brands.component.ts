@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContentfulService } from '../../core/contentful.service';
-import { Observable } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
+import brandsJSON from '../../../assets/data/brands.json';
 
 @Component({
   selector: 'app-brands',
@@ -15,7 +16,9 @@ export class BrandsComponent implements OnInit {
     ) { }
   brands$: Observable<any>;
   ngOnInit() {
-  this.brands$ = this.contentful.getBrandsPage();
+    console.log('the brands', brandsJSON.brands);
+    this.brands$ = of(brandsJSON.brands) ;
+  // this.brands$ = this.contentful.getBrandsPage();
   }
   goToBrand(path: any): void {
     console.log('path', path);
